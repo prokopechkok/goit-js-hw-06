@@ -12,7 +12,9 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
 const galleryUl = document.querySelector(".gallery");
+galleryUl.classList.add("js3-gallery");
 
 const markup = images
   .map(
@@ -22,18 +24,3 @@ const markup = images
   .join("");
 
 galleryUl.insertAdjacentHTML("beforeend", markup);
-
-galleryUl.style.display = "flex";
-galleryUl.style.listStyle = "none";
-galleryUl.style.flexDirection = "column";
-galleryUl.style.alignItems = "center";
-
-const items = document.getElementsByClassName("js3-item");
-const imgs = document.getElementsByClassName("js3-img");
-
-[...items].forEach((element) => {
-  element.style.width = "200px";
-  element.style.marginRight = "10px";
-});
-
-[...imgs].forEach((image) => (image.style.width = "200px"));
